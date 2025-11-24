@@ -1,42 +1,58 @@
-# ---- Python ----
+# -------------------------------
+# Python cache files
+# -------------------------------
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# ---- Virtual Environments ----
+# -------------------------------
+# Virtual Environments
+# -------------------------------
 env/
 venv/
 *env/
 new_env/
 Scripts/
 
-# ---- OS / System Files ----
-.DS_Store
-Thumbs.db
-
-# ---- IDE Files ----
+# -------------------------------
+# IDE / Editor settings
+# -------------------------------
 .vscode/
 .idea/
 
-# ---- Streamlit ----
+# -------------------------------
+# OS & system junk files
+# -------------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------------
+# Streamlit
+# -------------------------------
 .streamlit/secrets.toml
 
-# ---- DeepFace Model Weights ----
+# -------------------------------
+# DeepFace Model Weights and Cache
+# -------------------------------
 .deepface/
 deepface/
 *.h5
 weights/
 
-# ---- Data / Training / Output ----
+# -------------------------------
+# Logs
+# -------------------------------
+logs/
+*.log
+
+# -------------------------------
+# Generated / Intermediate Data
+# -------------------------------
 data/train/
 data/02_intermediate_data/
 data/01_raw_data/bibek*
 extra_files/*
 *face_day4/
 *day*
-
-# ---- Logs ----
-logs/
-*.log
 
