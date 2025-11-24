@@ -1,34 +1,32 @@
-# eKYC Smart Identity Verification System
+📌 E-KYC Automation System
 
-This project is an **AI-powered eKYC system** built using **DeepFace, OCR, MySQL, and Streamlit**.  
-It verifies a user's identity by extracting text from an ID card (PAN / Aadhar) and comparing the extracted face with a live face image.
+A fully automated e-KYC (Electronic Know Your Customer) system built using Computer Vision, Deep Learning, OCR, and Streamlit.
+This application extracts information from government ID cards (Aadhaar/PAN), verifies the user’s face against the ID card photo, and stores verified data securely in a MySQL database.
 
----
+🚀 Features
+Feature	Description
+🧠 OCR-Based Text Extraction	Uses EasyOCR to extract Name, DOB, Father's name, and ID number.
+👤 Face Verification	Uses DeepFace + HaarCascade to compare uploaded face image with ID card photo.
+🗄️ Database Storage	Stores extracted information and face embeddings in MySQL.
+🔁 Duplicate Detection	Automatically detects if a user is already registered.
+🧩 Modular Code Structure	Easy to extend for other identity documents.
+💻 Streamlit UI	Simple upload-based interface. No manual entry required.
 
-## 🚀 Features
-
-| Feature | Status |
-|--------|--------|
-| OCR-based text extraction from ID cards | ✔ |
-| Face detection and cropping | ✔ |
-| Face embedding comparison using **DeepFace** | ✔ |
-| Duplicate user check using MySQL database | ✔ |
-| User registration and storage system | ✔ |
-| Streamlit web interface | ✔ |
-
----
-
-## 🖥️ Tech Stack
-
-- **Python 3.10+**
-- **OpenCV**
-- **DeepFace**
-- **Tesseract OCR**
-- **MySQL**
-- **SQLAlchemy**
-- **Streamlit**
-
----
-
-## 📁 Project Structure
+🏗️ System Workflow
+User → Uploads ID Card + Face Image  
+     → OCR + Face Extraction  
+     → Face Verification  
+         ├── ❌ Failed → Stop  
+         └── ✅ Passed → Extract Data + Generate Embeddings  
+ → Check Duplicacy  
+         ├── Found → Return Existing Record  
+         └── Not Found → Save to MySQL  
+🛠️ Technologies Used
+Category	Tools/Frameworks
+UI	Streamlit
+OCR	EasyOCR
+Face Recognition	DeepFace (FaceNet), Haarcascade
+Backend	Python
+Database	MySQL
+ML Tools	OpenCV, NumPy, TensorFlow/Keras
 
