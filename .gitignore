@@ -1,15 +1,42 @@
-*env/
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ---- Virtual Environments ----
+env/
 venv/
-data/train/
+*env/
 new_env/
-extra_files/*
-__pycache__/*
-data/01_raw_data/bibek*
 Scripts/
-.streamlit/secrets.toml
-*env*
-deepface/*
-*day*
+
+# ---- OS / System Files ----
+.DS_Store
+Thumbs.db
+
+# ---- IDE Files ----
 .vscode/
+.idea/
+
+# ---- Streamlit ----
+.streamlit/secrets.toml
+
+# ---- DeepFace Model Weights ----
+.deepface/
+deepface/
+*.h5
+weights/
+
+# ---- Data / Training / Output ----
+data/train/
+data/02_intermediate_data/
+data/01_raw_data/bibek*
+extra_files/*
 *face_day4/
-data/02_int*
+*day*
+
+# ---- Logs ----
+logs/
+*.log
+

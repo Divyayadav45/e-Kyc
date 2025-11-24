@@ -18,7 +18,7 @@ import pandas as pd
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="1105",
+    password="Divya@123",
     database="ekyc"
 
 
